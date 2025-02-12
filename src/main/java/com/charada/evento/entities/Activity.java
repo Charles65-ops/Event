@@ -1,7 +1,6 @@
 package com.charada.evento.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
@@ -9,5 +8,9 @@ import lombok.Data;
 @Table(name = "tb_activity")
 public class Activity {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private String description;
 }

@@ -5,12 +5,11 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "tb_ticket")
-public class Ticket {
-
+@Table(name = "tb_speaker")
+public class Speaker {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String type;
-    private Double price;
+    private String name;
+    private String bio;
 }
